@@ -6,7 +6,7 @@
 2. [Değişkenler](#değişkenler)
 3. [Fonksiyonlar](#fonksiyonlar)
 4. [Nesneler Ve Veri Yapıları](#nesneler-ve-veri-yapıları)
-5. [Classes](#classes)
+5. [Sınıflar](#sınıflar)
 6. [SOLID](#solid)
 7. [Test etme](#test-etme)
 8. [Eşzamanlılık](#eşzamanlılık)
@@ -434,7 +434,7 @@ iki veya daha fazla ayrı fonksiyona sahip olmaya zorlar. Çift kodun kaldırıl
 bu farklı şeyleri tek bir işlev/modül/sınıfla işleyebilecek bir soyutlama 
 oluşturmak anlamına gelir.
 
-Soyutlamayı doğru yapmak çok önemlidir, bu yüzden _Classes_ bölümünde 
+Soyutlamayı doğru yapmak çok önemlidir, bu yüzden _Sınıflar_ bölümünde 
 belirtilen SOLID ilkelerine uymalısınız. Kötü soyutlamalar yinelenen 
 kodlardan daha kötü olabilir, bu yüzden dikkatli olun! Bunu söyledikten sonra, 
 iyi bir soyutlama yapabilirseniz yapın! Kendinizi tekrar etmeyin, aksi halde, 
@@ -1130,7 +1130,7 @@ console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
 
 **[⬆ başa dön](#içindekiler)**
 
-## **Classes**
+## **Sınıflar**
 
 ### Düz ES5 fonksiyonları yerine ES2015/ES6 sınıflarını tercih et
 
