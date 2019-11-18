@@ -37,7 +37,7 @@ etmesine izin verin.
 
 Bir şey daha var: bunları bilmek sizi hemen daha iyi bir yazılım geliştiricisi yapmaz 
 ve bunlarla yıllarca çalışmış olmak hiç hata yapmayacağınız anlamına da gelmez. 
-Her kod parçası, şekillendirilip son haline çevirilen ıslak kilin gibi ilk taslak 
+Her kod parçası, şekillendirilip son haline çevirilen ıslak kil gibi ilk taslak 
 olarak başlar. Son olarak, akranlarımızla birlikte gözden geçirdiğimiz zaman kusurları 
 gideririz. İyileştirilmesi gereken ilk taslaklar için kendinize eziyet etmeyin. 
 Bunun yerine kodu yorun!
@@ -167,7 +167,7 @@ locations.forEach(location => {
 
 ### Gereksiz bağlam ekleme
 
-Eğer sınıf ya da nesne ne yaptığını söylüyprsa, değişken isminde tekrar 
+Eğer sınıf ya da nesne ne yaptığını söylüyorsa, değişken isminde tekrar 
 belirtmenize gerek yok.
 
 **Yanlış:**
@@ -1641,7 +1641,7 @@ renderLargeShapes(shapes);
 ### Arayüz Ayrım Prensibi (ISP)
 
 JavaScript'te interface yoktur, bu nedenle bu ilke diğerleri kadar uygulanabilir 
-değildir. Bununla birlikte, bu kavramJavaScript’in tip sistem eksikliğinde bile 
+değildir. Bununla birlikte, bu kavram JavaScript’in tip sistem eksikliğinde bile 
 faydalı ve önemlidir.
 
 Arayüz Ayrım Prensibi (ISP) "İstemcilerin kullanmadıkları arayüzlere bağlı 
@@ -2032,7 +2032,7 @@ try {
 
 ### Reddedilen promise'leri gözardı etmeyin
 
-`try/catch` bloğu içindeki hataları gözardı etmemenizin sebebbi olan gerekçeler 
+`try/catch` bloğu içindeki hataları gözardı etmemenizin sebebi olan gerekçeler 
 bunun için de geçerlidir.
 
 **Yanlış:**
