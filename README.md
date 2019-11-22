@@ -978,7 +978,7 @@ Buradaki sorunlara çözülene kadar optimizasyon yapmayı hedefleyin.
 ```javascript
 // Eski tarayıcılarda döngünün her turunda `list.length` ön belleğe alınmadığı için pahalıydı
 // çünkğ her defa `list.length` tekrardan hesaplanıyordu. Modern tarayıcılarda bu sorun giderildi.
-for (let i = 0; len = list.length; i < len; i++) {
+for (let i = 0, len = list.length; i < len; i++) {
   // ...
 }
 ```
