@@ -1032,7 +1032,7 @@ inventoryTracker("apples", req, "www.inventory-awesome.io");
 ### Getter Ve Setter kullanın
 
 Nesnelerdeki verilere erişmek için getter ve setter kullanmak, yalnızca bir 
-nesnede özelliğe direk erişmekten daha iyi olabilir. "Neden?" diye sorabilirsin. 
+nesnede özelliğe direkt erişmekten daha iyi olabilir. "Neden?" diye sorabilirsin. 
 Peki, işte dağınık bir sebepler listesi:
 
 - Bir nesne özelliği elde etmenin ötesinde daha fazla şey yapmak istediğinizde, 
