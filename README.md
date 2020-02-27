@@ -167,7 +167,7 @@ locations.forEach(location => {
 
 ### Gereksiz bağlam ekleme
 
-Eğer sınıf ya da nesne ne yaptığını söylüyprsa, değişken isminde tekrar 
+Eğer sınıf ya da nesne ne yaptığını söylüyorsa, değişken isminde tekrar 
 belirtmenize gerek yok.
 
 **Yanlış:**
