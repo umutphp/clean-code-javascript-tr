@@ -99,7 +99,7 @@ setTimeout(blastOff, 86400000);
 
 ```javascript
 // Büyük harfli constant olarak tanımlayın.
-const MILLISECONDS_IN_A_DAY = 86400000;
+const MILLISECONDS_IN_A_DAY = 60 * 60 * 24 * 1000; //86400000;
 
 setTimeout(blastOff, MILLISECONDS_IN_A_DAY);
 ```
@@ -246,15 +246,13 @@ verdiğinden, çok fazla argümana ihtiyaç duyduğunuzu tespit ediyorsanız,
 anlık oluşturduğunuz bir nesneyi kullanabilirsiniz..
 
 Fonksiyonun hangi özellikleri beklediğini açıkça belirtmek için, ES2015/ES6 
-imha sözdizimini ("destructuring syntax") kullanabilirsiniz. bunun bazı avantajları vardır:
+"destructuring" sözdizimini kullanabilirsiniz. Bunun bazı avantajları vardır:
 
-1. Biri fonksiyonun tanımına baktığında, nelerin kullanıldığı oldukça
-   açıktır.
-2. İmha yöntemi, fonksiyona geçilen parametre nesnesinin belirtilen ilkel değerlerini 
-   de klonlar. Bu, yan etkilerin önlenmesine yardımcı olabilir. 
+1. Fonksiyonun tanımına bakıldığında, nelerin kullanıldığı oldukça açıktır.
+2. Adlandırılmış parametreleri simüle etmek için kullanılabilir.
+3. İmha yöntemi, fonksiyona geçilen parametre nesnesinin belirtilen ilkel değerlerini de klonlar. Bu, yan etkilerin önlenmesine yardımcı olabilir. 
    Not: parametre nesnesinden imha edilen nesneler ve diziler klonlanmaz.
-3. Linter kontrolleri kullanılmayan özellikler hakkında sizi uyarır, ki bu imha yöntemi olmadan
-   mümkün değildir.
+4. Linter kontrolleri kullanılmayan özellikler hakkında sizi uyarır, ki bu destructuring yöntemi olmadan mümkün değildir.
 
 **Yanlış:**
 
@@ -345,7 +343,7 @@ addMonthToDate(1, date);
 
 **[⬆ başa dön](#içindekiler)**
 
-### Fonksiyonlar yalnızca bir seviye soyutlama olmalıdır
+### Fonksiyonlarda yalnızca bir seviye soyutlama olmalıdır
 
 Birden fazla soyutlama seviyesine sahipseniz, fonksiyon genellikle çok 
 fazla şey yapar. Fonksiyonları bölmek yeniden kullanılabilirliğe ve daha 
@@ -424,19 +422,19 @@ bir sorun olduğunda ya da değiştirilmesi gerektiğinde ilgilenilmesi gereken 
 yer var demektir.
 
 Bir restoran işlettiğinizi ve envanterinizi takip ettiğinizi düşünün: tüm domatesleriniz, 
-soğanlarınız, sarımsaklarınız, baharatlarınız vb. onların içinde. Eğer birden fazla 
+soğanlarınız, sarımsaklarınız, baharatlarınız vb. Eğer birden fazla 
 listeniz varsa, bir yemek yaptığınızda hepsini güncellemeniz gerekecektir. Yalnızca bir 
 listeniz varsa, güncellenecek tek bir yer vardır!
 
-Çoğunlukla, yinelenen kodunuz vardır, çünkü bir ortaklığı paylaşan iki veya 
-daha fazla farklı işlem vardır, ancak farklılıkları sizi aynı şeyleri yapan 
+Çoğunlukla, yinelenen kod yapılarınız vardır. Çünkü bir ortak işlemi paylaşan iki veya 
+daha fazla farklı fonksiyonunuz olabilir. Ancak bazı ufak farklılıklar sizi aynı şeyleri yapan 
 iki veya daha fazla ayrı fonksiyona sahip olmaya zorlar. Çift kodun kaldırılması, 
 bu farklı şeyleri tek bir işlev/modül/sınıfla işleyebilecek bir soyutlama 
 oluşturmak anlamına gelir.
 
 Soyutlamayı doğru yapmak çok önemlidir, bu yüzden _Sınıflar_ bölümünde 
 belirtilen SOLID ilkelerine uymalısınız. Kötü soyutlamalar yinelenen 
-kodlardan daha kötü olabilir, bu yüzden dikkatli olun! Bunu söyledikten sonra, 
+kodlardan daha da kötü olabilir, bu yüzden dikkatli olun! Bunu söyledikten sonra, 
 iyi bir soyutlama yapabilirseniz yapın! Kendinizi tekrar etmeyin, aksi halde, 
 bir şeyi değiştirmek istediğinizde kendinizi birden çok yeri güncellerken bulacaksınız.
 
@@ -635,7 +633,7 @@ console.log(newName); // ['Ryan', 'McDermott'];
 
 **[⬆ başa dön](#içindekiler)**
 
-### Yan etkilerden kaçınma (bölüm 1)
+### Yan etkilerden kaçınma (bölüm 2)
 
 JavaScript'te, ilkel değerler değer olarak ve nesneler/diziler referans 
 olarak  iletilir. Nesneler ve diziler söz konusu olduğunda, işleviniz bir 
