@@ -17,30 +17,15 @@
 
 ## Giriş
 
-![Yazılım kalitesi tahmininin kaç höykürme sayısı olarak komik görüntüsü
-okurken siz de höyküreceksiniz](https://www.osnews.com/images/comics/wtfm.jpg)
+![Yazılım kalitesi tahmininin kaç höykürme sayısı olarak komik görüntüsü okurken siz de höyküreceksiniz](https://www.osnews.com/images/comics/wtfm.jpg)
 
-Yazlım mühendisliği prensipleri, Robert C. Martin'in kitabından 
-[_Clean Code_](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882),
-JavaScript için uyarlandı. Bu belge bir kod yazma semantik rehberi değildir. Bu belge JavaScript ile [okunabilir, yeniden kullanılabilir ve elden geçirilebilir](https://github.com/ryanmcdermott/3rs-of-software-architecture) yazılım üretebilmek için kullanılabilecek bir rehber oluşturmak için yazıldı.
+Yazlım mühendisliği prensipleri, Robert C. Martin'in kitabından  [_Clean Code_](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882), JavaScript için uyarlandı. Bu belge bir kod yazma semantik rehberi değildir. Bu belge JavaScript ile [okunabilir, yeniden kullanılabilir ve elden geçirilebilir](https://github.com/ryanmcdermott/3rs-of-software-architecture) yazılım üretebilmek için kullanılabilecek bir rehber oluşturmak için yazıldı.
 
-Buradaki her ilkeye kesinlikle uyulması gerekmiyor ve hatta bir çoğu evrensel 
-olarak kabul edilmeyebilir. Bunlar yönergelerdir, daha fazlası değil, 
-ama uzun yıllar boyunca edindikleri toplu tecrübe ile 
-_Clean Code_ kitabı yazarlarınca derlenmiş olanlardır.
+Buradaki her ilkeye kesinlikle uyulması gerekmiyor ve hatta bir çoğu evrensel olarak kabul edilmeyebilir. Bunlar yönergelerdir, daha fazlası değil, ama uzun yıllar boyunca edindikleri toplu tecrübe ile _Clean Code_ kitabı yazarlarınca derlenmiş olanlardır.
 
-Yazılım mühendisliği zanaatı 50 yaşın biraz üzerinde ve hala çok şey öğreniyoruz. 
-Yazılım mimarisi mimarlığın kendisi kadar eskidiğinde, belki o zaman uyması gereken 
-daha sağlam kurallar olacaktır. Şimdilik, bu kuralların sizin ve ekibinizin ürettiği 
-JavaScript kodunun kalitesini değerlendirmek için bir mihenk taşı olarak hizmet 
-etmesine izin verin.
+Yazılım mühendisliği zanaatı 50 yaşın biraz üzerinde ve hala çok şey öğreniyoruz. Yazılım mimarisi mimarlığın kendisi kadar eskidiğinde, belki o zaman uyması gereken daha sağlam kurallar olacaktır. Şimdilik, bu kuralların sizin ve ekibinizin ürettiği JavaScript kodunun kalitesini değerlendirmek için bir mihenk taşı olarak hizmet etmesine izin verin.
 
-Bir şey daha var: bunları bilmek sizi hemen daha iyi bir yazılım geliştiricisi yapmaz 
-ve bunlarla yıllarca çalışmış olmak hiç hata yapmayacağınız anlamına da gelmez. 
-Her kod parçası, şekillendirilip son haline çevirilen ıslak kilin gibi ilk taslak 
-olarak başlar. Son olarak, akranlarımızla birlikte gözden geçirdiğimiz zaman kusurları 
-gideririz. İyileştirilmesi gereken ilk taslaklar için kendinize eziyet etmeyin. 
-Bunun yerine kodu yorun!
+Bir şey daha var: bunları bilmek sizi hemen daha iyi bir yazılım geliştiricisi yapmaz ve bunlarla yıllarca çalışmış olmak hiç hata yapmayacağınız anlamına da gelmez. Her kod parçası, şekillendirilip son haline çevirilen ıslak kilin gibi ilk taslak olarak başlar. Son olarak, akranlarımızla birlikte gözden geçirdiğimiz zaman kusurları gideririz. İyileştirilmesi gereken ilk taslaklar için kendinize eziyet etmeyin. Bunun yerine kodu yorun!
 
 ## **Değişkenler**
 
@@ -80,13 +65,7 @@ getUser();
 
 ### Aranabilecek isimler kullanın
 
-Yazdığımızdan daha çok kod satırı okuruz. Dolayısıyla yazdığımız kodun
-okunabilir ve aranabilir olması önemlidir. Değişkenlerimize programımızın ne yapmaya çalıştığını 
-anlatacak anlamlı isimler vermezsek kodumuzu okumaya çalışanlar çok üzülecektir. 
-Verdiğiniz isimlerin kolayca aranabilir olmasını sağlayın. Bunun için
-[buddy.js](https://github.com/danielstjules/buddy.js) ve
-[ESLint](https://github.com/eslint/eslint/blob/660e0918933e6e7fede26bc675a0763a6b357c94/docs/rules/no-magic-numbers.md)
-gibi araçlar size isimlendirme hatalarınızı gösterek yardımcı olabilir.
+Yazdığımızdan daha çok kod satırı okuruz. Dolayısıyla yazdığımız kodun okunabilir ve aranabilir olması önemlidir. Değişkenlerimize programımızın ne yapmaya çalıştığını anlatacak anlamlı isimler vermezsek kodumuzu okumaya çalışanlar çok üzülecektir. Verdiğiniz isimlerin kolayca aranabilir olmasını sağlayın. Bunun için [buddy.js](https://github.com/danielstjules/buddy.js) ve [ESLint](https://github.com/eslint/eslint/blob/660e0918933e6e7fede26bc675a0763a6b357c94/docs/rules/no-magic-numbers.md) gibi araçlar size isimlendirme hatalarınızı gösterek yardımcı olabilir.
 
 **Yanlış:**
 
@@ -167,8 +146,7 @@ locations.forEach(location => {
 
 ### Gereksiz bağlam ekleme
 
-Eğer sınıf ya da nesne ne yaptığını söylüyprsa, değişken isminde tekrar 
-belirtmenize gerek yok.
+Eğer sınıf ya da nesne ne yaptığını söylüyprsa, değişken isminde tekrar belirtmenize gerek yok.
 
 **Yanlış:**
 
@@ -202,10 +180,7 @@ function paintCar(car) {
 
 ### Kısa kontrol (||) ya da kontrol kullanmak yerine ön tanımlı parametre kullanın
 
-Ön tanımlı parametre kullanmak kısa kontrol yapılarında genellikle daha temiz kod oluşturur. Bu şekilde
-kullandığınızda, kodunuzun sadece `undefined` olan parametreler için ön tanımlı değer sağlayacağını 
-unutmayın. `''`, `""`, `false`, `null`, `0`, ve `NaN` gibi "hatalı" değerler ön tanımlı değer ile 
-değiştirilmeyecektir.
+Ön tanımlı parametre kullanmak kısa kontrol yapılarında genellikle daha temiz kod oluşturur. Bu şekilde kullandığınızda, kodunuzun sadece `undefined` olan parametreler için ön tanımlı değer sağlayacağını unutmayın. `''`, `""`, `false`, `null`, `0`, ve `NaN` gibi "hatalı" değerler ön tanımlı değer ile değiştirilmeyecektir.
 
 **Yanlış:**
 
@@ -230,23 +205,14 @@ function createMicrobrewery(name = "Hipster Brew Co.") {
 
 ### Fonksiyon parametreleri (ideal olan 2 veya daha az olması)
 
-Fonksiyon parametrelerinin sayısının sınırlandırılması, fonksiyonunuzun test 
-edilmesini kolaylaştırdığı için inanılmaz derecede önemlidir. Üçten fazlaya 
-sahip olmak, her bir ayrı argümanla tonlarca farklı durumu test etmeniz gereken 
-bir kombinasyon patlamasına yol açar.
+Fonksiyon parametrelerinin sayısının sınırlandırılması, fonksiyonunuzun test edilmesini kolaylaştırdığı için inanılmaz derecede önemlidir. Üçten fazlaya sahip olmak, her bir ayrı argümanla tonlarca farklı durumu test etmeniz gereken bir kombinasyon patlamasına yol açar.
 
-Bir veya iki argüman ideal durumdur ve mümkünse üçten kaçınılmalıdır.
-Bundan fazlası tekrar düşünülmelidir. Çoğunlukla, 2 den fazla parametreye
-sahip bir fonksiyonunuz varsa, yapması gerektiğinden fazla iş yapıyordur. 
-Gerçekten gerekli olduğu durumda, çoğu zaman bir üst seviye nesne argüman 
-olarak yeterli olacaktır.
+Bir veya iki argüman ideal durumdur ve mümkünse üçten kaçınılmalıdır. Bundan fazlası tekrar düşünülmelidir. Çoğunlukla, 2 den fazla parametreye
+sahip bir fonksiyonunuz varsa, yapması gerektiğinden fazla iş yapıyordur. Gerçekten gerekli olduğu durumda, çoğu zaman bir üst seviye nesne argüman olarak yeterli olacaktır.
 
-JavaScript, çok fazla sınıf tanımlamadan anında nesneler oluşturmanıza izin 
-verdiğinden, çok fazla argümana ihtiyaç duyduğunuzu tespit ediyorsanız, 
-anlık oluşturduğunuz bir nesneyi kullanabilirsiniz..
+JavaScript, çok fazla sınıf tanımlamadan anında nesneler oluşturmanıza izin verdiğinden, çok fazla argümana ihtiyaç duyduğunuzu tespit ediyorsanız, anlık oluşturduğunuz bir nesneyi kullanabilirsiniz..
 
-Fonksiyonun hangi özellikleri beklediğini açıkça belirtmek için, ES2015/ES6 
-"destructuring" sözdizimini kullanabilirsiniz. Bunun bazı avantajları vardır:
+Fonksiyonun hangi özellikleri beklediğini açıkça belirtmek için, ES2015/ES6 "destructuring" sözdizimini kullanabilirsiniz. Bunun bazı avantajları vardır:
 
 1. Fonksiyonun tanımına bakıldığında, nelerin kullanıldığı oldukça açıktır.
 2. Adlandırılmış parametreleri simüle etmek için kullanılabilir.
@@ -281,11 +247,7 @@ createMenu({
 
 ### Fonksiyonlar sadece bir iş yapmalı
 
-Bu, yazılım mühendisliğinde belki de en önemli kuraldır. Eğer bir fonksiyon 
-birden fazla iş yapıyorsa, bu fonksiyonu oluşturmaki test etmek ve anlamlandırmak zordur. 
-Eğer bir fonksiyonu sadece bir işe yapacak şekilde sınırlandırırsanız, kolayca elden 
-geçirilebilir ve kodunuz daha okunaklı olur. Bu rehberden birtek bunu alsanız bile, 
-birçok geliştiriciden önde olacaksınız.
+Bu, yazılım mühendisliğinde belki de en önemli kuraldır. Eğer bir fonksiyon birden fazla iş yapıyorsa, bu fonksiyonu oluşturmaki test etmek ve anlamlandırmak zordur. Eğer bir fonksiyonu sadece bir işe yapacak şekilde sınırlandırırsanız, kolayca elden geçirilebilir ve kodunuz daha okunaklı olur. Bu rehberden birtek bunu alsanız bile, birçok geliştiriciden önde olacaksınız.
 
 **Yanlış:**
 
@@ -345,8 +307,7 @@ addMonthToDate(1, date);
 
 ### Fonksiyonlarda yalnızca bir seviye soyutlama olmalıdır
 
-Birden fazla soyutlama seviyesine sahipseniz, fonksiyon genellikle çok 
-fazla şey yapar. Fonksiyonları bölmek yeniden kullanılabilirliğe ve daha 
+Birden fazla soyutlama seviyesine sahipseniz, fonksiyon genellikle çok fazla şey yapar. Fonksiyonları bölmek yeniden kullanılabilirliğe ve daha 
 kolay testlere neden olur.
 
 **Yanlış:**
@@ -417,26 +378,14 @@ function parse(tokens) {
 
 ### Çoklanmış kodları kaldırın
 
-Kod çoklanmasını engellemek için elinizden geleni yapın. Çoklanmış kod kötüdür çünkü 
-bir sorun olduğunda ya da değiştirilmesi gerektiğinde ilgilenilmesi gereken birden fazla 
-yer var demektir.
+Kod çoklanmasını engellemek için elinizden geleni yapın. Çoklanmış kod kötüdür çünkü bir sorun olduğunda ya da değiştirilmesi gerektiğinde ilgilenilmesi gereken birden fazla yer var demektir.
 
-Bir restoran işlettiğinizi ve envanterinizi takip ettiğinizi düşünün: tüm domatesleriniz, 
-soğanlarınız, sarımsaklarınız, baharatlarınız vb. Eğer birden fazla 
-listeniz varsa, bir yemek yaptığınızda hepsini güncellemeniz gerekecektir. Yalnızca bir 
-listeniz varsa, güncellenecek tek bir yer vardır!
+Bir restoran işlettiğinizi ve envanterinizi takip ettiğinizi düşünün: tüm domatesleriniz, soğanlarınız, sarımsaklarınız, baharatlarınız vb. Eğer birden fazla listeniz varsa, bir yemek yaptığınızda hepsini güncellemeniz gerekecektir. Yalnızca bir listeniz varsa, güncellenecek tek bir yer vardır!
 
-Çoğunlukla, yinelenen kod yapılarınız vardır. Çünkü bir ortak işlemi paylaşan iki veya 
-daha fazla farklı fonksiyonunuz olabilir. Ancak bazı ufak farklılıklar sizi aynı şeyleri yapan 
-iki veya daha fazla ayrı fonksiyona sahip olmaya zorlar. Çift kodun kaldırılması, 
-bu farklı şeyleri tek bir işlev/modül/sınıfla işleyebilecek bir soyutlama 
-oluşturmak anlamına gelir.
+Çoğunlukla, yinelenen kod yapılarınız vardır. Çünkü bir ortak işlemi paylaşan iki veya daha fazla farklı fonksiyonunuz olabilir. Ancak bazı ufak farklılıklar sizi aynı şeyleri yapan iki veya daha fazla ayrı fonksiyona sahip olmaya zorlar. Çift kodun kaldırılması, bu farklı şeyleri tek bir işlev/modül/sınıfla işleyebilecek bir soyutlama oluşturmak anlamına gelir.
 
-Soyutlamayı doğru yapmak çok önemlidir, bu yüzden _Sınıflar_ bölümünde 
-belirtilen SOLID ilkelerine uymalısınız. Kötü soyutlamalar yinelenen 
-kodlardan daha da kötü olabilir, bu yüzden dikkatli olun! Bunu söyledikten sonra, 
-iyi bir soyutlama yapabilirseniz yapın! Kendinizi tekrar etmeyin, aksi halde, 
-bir şeyi değiştirmek istediğinizde kendinizi birden çok yeri güncellerken bulacaksınız.
+Soyutlamayı doğru yapmak çok önemlidir, bu yüzden _Sınıflar_ bölümünde belirtilen SOLID ilkelerine uymalısınız. Kötü soyutlamalar yinelenen 
+kodlardan daha da kötü olabilir, bu yüzden dikkatli olun! Bunu söyledikten sonra, iyi bir soyutlama yapabilirseniz yapın! Kendinizi tekrar etmeyin, aksi halde, bir şeyi değiştirmek istediğinizde kendinizi birden çok yeri güncellerken bulacaksınız.
 
 **Yanlış:**
 
@@ -586,19 +535,11 @@ function createTempFile(name) {
 
 ### Yan etkilerden kaçınma (bölüm 1)
 
-Bir fonksiyon, bir değeri almak ve başka bir değer veya değerler döndürmekten 
-başka bir şey yaparsa, bir yan etki oluşturur. Bu yan etki bir dosyaya yazmak, 
-bazı global değişkenleri değiştirmek veya yanlışlıkla tüm paranızı bir yabancıya 
-bağlamak olabilir.
+Bir fonksiyon, bir değeri almak ve başka bir değer veya değerler döndürmekten başka bir şey yaparsa, bir yan etki oluşturur. Bu yan etki bir dosyaya yazmak, bazı global değişkenleri değiştirmek veya yanlışlıkla tüm paranızı bir yabancıya bağlamak olabilir.
 
-Zaman zaman bir programda yan etkilere ihtiyacınız olur. Önceki örnekte olduğu gibi, 
-bir dosyaya yazmanız gerekebilir. Yapmak istediğiniz şey, bunu yaptığınız yeri 
-merkezileştirmektir. Belirli bir dosyaya yazan çok sayıda fonksiyon ve sınıfa sahip olmayın. 
-Bunu yapan bir servis oluşturun. Sadece bir tane.
+Zaman zaman bir programda yan etkilere ihtiyacınız olur. Önceki örnekte olduğu gibi, bir dosyaya yazmanız gerekebilir. Yapmak istediğiniz şey, bunu yaptığınız yeri merkezileştirmektir. Belirli bir dosyaya yazan çok sayıda fonksiyon ve sınıfa sahip olmayın. Bunu yapan bir servis oluşturun. Sadece bir tane.
 
-Ana nokta, herhangi bir yapıya sahip olmadan nesneler arasında durum paylaşımı, herhangi 
-bir şey tarafından yazılabilen değişken yanları kullanmak ve yan etkilerin ortaya çıktığı 
-yerleri merkezileştirmemek gibi çok yapılan hatalarda kaçınmaktır. Bunu yapabilirseniz, diğer 
+Ana nokta, herhangi bir yapıya sahip olmadan nesneler arasında durum paylaşımı, herhangi bir şey tarafından yazılabilen değişken yanları kullanmak ve yan etkilerin ortaya çıktığı yerleri merkezileştirmemek gibi çok yapılan hatalarda kaçınmaktır. Bunu yapabilirseniz, diğer 
 programcıların büyük çoğunluğundan daha mutlu olursunuz.
 
 **Yanlış:**
@@ -635,22 +576,10 @@ console.log(newName); // ['Ryan', 'McDermott'];
 
 ### Yan etkilerden kaçınma (bölüm 2)
 
-JavaScript'te, ilkel değerler değer olarak ve nesneler/diziler referans 
-olarak  iletilir. Nesneler ve diziler söz konusu olduğunda, işleviniz bir 
-alışveriş sepeti dizisinde bir değişiklik yaparsa, örneğin satın almak 
-için bir öğe eklerse, bu `cart` dizisini kullanan diğer işlevler bu eklemeden 
-etkilenir. Bu iyi olabilir, ancak kötü de olabilir. Bunu anlamak için aşağıdaki 
-örneği düşünelim:
+JavaScript'te, ilkel değerler değer olarak ve nesneler/diziler referans olarak  iletilir. Nesneler ve diziler söz konusu olduğunda, işleviniz bir 
+alışveriş sepeti dizisinde bir değişiklik yaparsa, örneğin satın almak için bir öğe eklerse, bu `cart` dizisini kullanan diğer işlevler bu eklemeden etkilenir. Bu iyi olabilir, ancak kötü de olabilir. Bunu anlamak için aşağıdaki örneği düşünelim:
 
-Kullanıcı, bir ağ isteğini başlatan ve `cart` dizisini sunucuya gönderen bir 
-`satın alma` fonksiyonunu çağıran "Purchase" düğmesini tıklar. Kötü bir ağ 
-bağlantısı nedeniyle, `satın alma` işlevinin isteği yeniden denemeye devam 
-etmesi gerekir. Şimdi, bu arada kullanıcı yanlışlıkla ağ isteği başlamadan önce 
-istemediği bir öğe üzerinde "Sepete Ekle" düğmesini yanlışlıkla tıklarsa ne olur? 
-Bu gerçekleşirse ve ağ isteği başlarsa, o zaman satın alma işlevi yanlışlıkla 
-eklenen öğeyi gönderir, çünkü istenmeyen bir öğe eklenerek değiştirilmiş bir 
-`addItemToCart` işlevinin değiştirdiği bir alışveriş sepeti dizisine bir başvuru 
-yapar.
+Kullanıcı, bir ağ isteğini başlatan ve `cart` dizisini sunucuya gönderen bir `satın alma` fonksiyonunu çağıran "Purchase" düğmesini tıklar. Kötü bir ağ bağlantısı nedeniyle, `satın alma` işlevinin isteği yeniden denemeye devam etmesi gerekir. Şimdi, bu arada kullanıcı yanlışlıkla ağ isteği başlamadan önce istemediği bir öğe üzerinde "Sepete Ekle" düğmesini yanlışlıkla tıklarsa ne olur? Bu gerçekleşirse ve ağ isteği başlarsa, o zaman satın alma işlevi yanlışlıkla eklenen öğeyi gönderir, çünkü istenmeyen bir öğe eklenerek değiştirilmiş bir `addItemToCart` işlevinin değiştirdiği bir alışveriş sepeti dizisine bir başvuru yapar.
 
 `AddItemToCart` için her zaman `cart`'ı klonlamak, düzenlemek ve klonu geri göndermek 
 için harika bir çözüm olacaktır. Bu, alışveriş sepetinin referansını tutan başka hiçbir 
@@ -658,15 +587,9 @@ fonksiyonun herhangi bir değişiklikten etkilenmemesini sağlar.
 
 Bu yaklaşımda hatırlanması gereken iki uyarı:
 
-1. Giriş nesnesini gerçekten değiştirmek istediğiniz durumlar olabilir, ancak bu programlama 
-   yaklaşımını uyguladığınızda, bu durumların oldukça nadir olduğunu göreceksiniz. Çoğu şey yan 
-   etkisi olmayacak şekilde yeniden yapılandırılabilir!
+1. Giriş nesnesini gerçekten değiştirmek istediğiniz durumlar olabilir, ancak bu programlama yaklaşımını uyguladığınızda, bu durumların oldukça nadir olduğunu göreceksiniz. Çoğu şey yan etkisi olmayacak şekilde yeniden yapılandırılabilir!
 
-2. Büyük nesneleri klonlamak, performans açısından çok pahalı olabilir. Neyse ki, 
-   bu uygulamada büyük bir sorun değil çünkü bu tür bir programlama yaklaşımının 
-   hızlı ve hafıza yoğun olmamasına izin veren ve nesneleri ve dizileri elle 
-   klonlamanızdan daha [verimli yapan kütüphaneler](https://facebook.github.io/immutable-js/) 
-   var.
+2. Büyük nesneleri klonlamak, performans açısından çok pahalı olabilir. Neyse ki, bu uygulamada büyük bir sorun değil çünkü bu tür bir programlama yaklaşımının hızlı ve hafıza yoğun olmamasına izin veren ve nesneleri ve dizileri elle klonlamanızdan daha [verimli yapan kütüphaneler](https://facebook.github.io/immutable-js/) var.
 
 **Yanlış:**
 
@@ -688,15 +611,7 @@ const addItemToCart = (cart, item) => {
 
 ### Global fonksiyonları değiştirmeyin
 
-Global kapsamı kirletmek JavaScript'te kötü bir uygulamadır çünkü başka bir 
-kütüphaneyle çakışabilirsiniz ve API'nizin kullanıcısı canlıda bir istisna 
-ile karşılaşana bundan haberdar olmaz. Bir örnek düşünelim: ya JavaScript'in 
-yerel `Array` yöntemini iki dizi arasındaki farkı gösterebilecek bir `diff` 
-yöntemine sahip olarak genişletmek istiyorsanız? Yeni işlevinizi Array.prototype 
-dosyasına yazabilirsiniz, ancak aynı şeyi yapmaya çalışan başka bir kitaplıkla 
-çakışabilir. Ya bu diğer kütüphane dizinin ilk ve son elemanları arasındaki farkı 
-bulmak için sadece `diff` kullanıyorsa? Bu yüzden sadece ES2015/ES6 sınıflarını kullanmak 
-ve sadece `Array` sınıfını genişletmek daha iyi olur.
+Global kapsamı kirletmek JavaScript'te kötü bir uygulamadır çünkü başka bir kütüphaneyle çakışabilirsiniz ve API'nizin kullanıcısı canlıda bir istisna ile karşılaşana bundan haberdar olmaz. Bir örnek düşünelim: ya JavaScript'in yerel `Array` yöntemini iki dizi arasındaki farkı gösterebilecek bir `diff` yöntemine sahip olarak genişletmek istiyorsanız? Yeni işlevinizi Array.prototype dosyasına yazabilirsiniz, ancak aynı şeyi yapmaya çalışan başka bir kitaplıkla çakışabilir. Ya bu diğer kütüphane dizinin ilk ve son elemanları arasındaki farkı bulmak için sadece `diff` kullanıyorsa? Bu yüzden sadece ES2015/ES6 sınıflarını kullanmak ve sadece `Array` sınıfını genişletmek daha iyi olur.
 
 **Yanlış:**
 
@@ -722,9 +637,7 @@ class SuperArray extends Array {
 
 ### Imperative programlama yerine fonksiyonel programlamayı tercih edin
 
-JavaScript, Haskell'in olduğu gibi fonksiyonel bir dil değildir, ancak fonksiyonel 
-bir tadı vardır. Fonksiyonel diller daha temiz ve test edilmesi daha kolay olabilir. 
-Yapabildiğiniz zaman bu programlama stilini tercih edin.
+JavaScript, Haskell'in olduğu gibi fonksiyonel bir dil değildir, ancak fonksiyonel bir tadı vardır. Fonksiyonel diller daha temiz ve test edilmesi daha kolay olabilir. Yapabildiğiniz zaman bu programlama stilini tercih edin.
 
 **Yanlış:**
 
@@ -839,14 +752,8 @@ if (isDOMNodePresent(node)) {
 
 ### Koşul önermelerinden kaçının
 
-Bu imkansız bir iş gibi görünür. Bunu ilk duyduklarında, çoğu insan 
-"bir if ifadesi olmadan nasıl bir şey yapabilirim?" der. Cevap, birçok 
-durumda aynı görevi gerçekleştirmek için polimorfizmi kullanabileceğinizdir. 
-İkinci soru genellikle, "peki bu harika ama neden bunu yapmak isteyeyim?", 
-bu cevap ise daha önce öğrendiğimiz bir temiz kod kavramıdır: bir işlev yalnızca 
-bir şey yapmalıdır. `İf` deyimine sahip sınıf ve işlevleriniz olduğunda, 
-kullanıcınıza işlevinizin birden fazla şey yaptığını söylersiniz. Unutmayın, 
-sadece bir şey yapın.
+Bu imkansız bir iş gibi görünür. Bunu ilk duyduklarında, çoğu insan "bir if ifadesi olmadan nasıl bir şey yapabilirim?" der. Cevap, birçok 
+durumda aynı görevi gerçekleştirmek için polimorfizmi kullanabileceğinizdir. İkinci soru genellikle, "peki bu harika ama neden bunu yapmak isteyeyim?", bu cevap ise daha önce öğrendiğimiz bir temiz kod kavramıdır: bir işlev yalnızca bir şey yapmalıdır. `İf` deyimine sahip sınıf ve işlevleriniz olduğunda, kullanıcınıza işlevinizin birden fazla şey yaptığını söylersiniz. Unutmayın, sadece bir şey yapın.
 
 **Yanlış:**
 
@@ -899,10 +806,7 @@ class Cessna extends Airplane {
 
 ### Tip kontrolünden kaçınma (bölüm 1)
 
-JavaScript'te veri tiplerini tanımlamak zorunlu değildir, yani işlevleriniz herhangi 
-bir tipte parametre alabilir. Bazen bu özgürlükten sorun çıkarabiliyor ve fonksiyonlarınızda 
-tip kontrolü yapmak cazip hale gelebiliyor. Bunu yapmaktan kaçınmanın birçok yolu vardır. 
-Dikkate alınacak ilk şey tutarlı API'ler.
+JavaScript'te veri tiplerini tanımlamak zorunlu değildir, yani işlevleriniz herhangi bir tipte parametre alabilir. Bazen bu özgürlükten sorun çıkarabiliyor ve fonksiyonlarınızda tip kontrolü yapmak cazip hale gelebiliyor. Bunu yapmaktan kaçınmanın birçok yolu vardır. Dikkate alınacak ilk şey tutarlı API'ler.
 
 **Yanlış:**
 
@@ -928,15 +832,7 @@ function travelToTexas(vehicle) {
 
 ### Tip kontrolünden kaçınma (bölüm 2)
 
-Dizeler ve tam sayılar gibi temel ilkel değerlerle çalışıyorsanız,ve polimorfizmi 
-kullanamıyorsanız ancak hala tip kontrolü yapma ihtiyacı hissederseniz, TypeScript 
-kullanmayı düşünmelisiniz. Standart JavaScript sözdiziminin üstüne statik yazma 
-özelliği sağladığından normal JavaScript'e mükemmel bir alternatiftir. Normal 
-JavaScript'i manuel olarak kontrol etmekdeki sorun, bunu iyi yapmanın, aldığınız 
-sahte "tür güvenliği" nin kayda değer okunabilirlik için telafi etmeyecek kadar 
-fazladan ek yük gerektirmesidir. JavaScript'inizi temiz tutun, iyi testler yazın 
-ve iyi kod incelemeleri yapın. Aksi takdirde, hepsini yapın ama TypeScript ile 
-(dediğim gibi, harika bir alternatif!).
+Dizeler ve tam sayılar gibi temel ilkel değerlerle çalışıyorsanız,ve polimorfizmi kullanamıyorsanız ancak hala tip kontrolü yapma ihtiyacı hissederseniz, TypeScript kullanmayı düşünmelisiniz. Standart JavaScript sözdiziminin üstüne statik yazma özelliği sağladığından normal JavaScript'e mükemmel bir alternatiftir. Normal JavaScript'i manuel olarak kontrol etmekdeki sorun, bunu iyi yapmanın, aldığınız sahte "tür güvenliği" nin kayda değer okunabilirlik için telafi etmeyecek kadar fazladan ek yük gerektirmesidir. JavaScript'inizi temiz tutun, iyi testler yazın ve iyi kod incelemeleri yapın. Aksi takdirde, hepsini yapın ama TypeScript ile (dediğim gibi, harika bir alternatif!).
 
 **Yanlış:**
 
@@ -965,17 +861,13 @@ function combine(val1, val2) {
 
 ### Gereksiz optimizasyon yapmayın
 
-Modern tarayıcılar çalışma zamanında bir çok optimizasyon ön tanımlı olarak yaparlar. 
-Çoğu zaman, kendiniz optimize etmeye çalışıyorsanız, zamanınızı boşa harcıyorsunuz 
-demektir. Nerelerde optimizasyonun eksik olduğunu görmek için 
-[iyi kaynaklar](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers) var. 
-Buradaki sorunlara çözülene kadar optimizasyon yapmayı hedefleyin.
+Modern tarayıcılar çalışma zamanında bir çok optimizasyon ön tanımlı olarak yaparlar. Çoğu zaman, kendiniz optimize etmeye çalışıyorsanız, zamanınızı boşa harcıyorsunuz demektir. Nerelerde optimizasyonun eksik olduğunu görmek için [iyi kaynaklar](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers) var. Buradaki sorunlara çözülene kadar optimizasyon yapmayı hedefleyin.
 
 **Yanlış:**
 
 ```javascript
 // Eski tarayıcılarda döngünün her turunda `list.length` ön belleğe alınmadığı için pahalıydı
-// çünkğ her defa `list.length` tekrardan hesaplanıyordu. Modern tarayıcılarda bu sorun giderildi.
+// çünkü her defa `list.length` tekrardan hesaplanıyordu. Modern tarayıcılarda bu sorun giderildi.
 for (let i = 0, len = list.length; i < len; i++) {
   // ...
 }
@@ -993,9 +885,7 @@ for (let i = 0; i < list.length; i++) {
 
 ### Ölü kodları silin
 
-Ölü kod çoklanmış kod kadar kötüdür. Kod yığınınızda tutulmaları için bir sebep 
-yoktur. Eğer kullanılmıyorsa, ondan kurtulun! Sürüm kontrol sistemlerinde geriye 
-dönebildiğiniz için lazım olduğunda bulabilirsiniz.
+Ölü kod çoklanmış kod kadar kötüdür. Kod yığınınızda tutulmaları için bir sebep yoktur. Eğer kullanılmıyorsa, ondan kurtulun! Sürüm kontrol sistemlerinde geriye dönebildiğiniz için lazım olduğunda bulabilirsiniz.
 
 **Yanlış:**
 
@@ -1029,17 +919,13 @@ inventoryTracker("apples", req, "www.inventory-awesome.io");
 
 ### Getter Ve Setter kullanın
 
-Nesnelerdeki verilere erişmek için getter ve setter kullanmak, yalnızca bir 
-nesnede özelliğe direk erişmekten daha iyi olabilir. "Neden?" diye sorabilirsin. 
-Peki, işte dağınık bir sebepler listesi:
+Nesnelerdeki verilere erişmek için getter ve setter kullanmak, yalnızca bir nesnede özelliğe direk erişmekten daha iyi olabilir. "Neden?" diye sorabilirsin. Peki, işte dağınık bir sebepler listesi:
 
-- Bir nesne özelliği elde etmenin ötesinde daha fazla şey yapmak istediğinizde, 
-  kod tabanınızdaki her erişimi aramanız ve değiştirmeniz gerekmez.
+- Bir nesne özelliği elde etmenin ötesinde daha fazla şey yapmak istediğinizde, kod tabanınızdaki her erişimi aramanız ve değiştirmeniz gerekmez.
 - Atama (`set`) yaparken doğrulama yapmanızı kolaylaştırır.
 - İç gösterimi koruyabilirsiniz.
 - Değer alırken ya da atama yaparken log ve hata kaydı oluşturmak kolaylaşır.
-- Nesnenizin özelliklerini tembel yaklaşımla yükleyebilirsiniz, örneğin bir 
-  sunucudan veri almayı düşünelim.
+- Nesnenizin özelliklerini tembel yaklaşımla yükleyebilirsiniz, örneğin bir sunucudan veri almayı düşünelim.
 
 **Yanlış:**
 
@@ -1132,10 +1018,7 @@ console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
 
 ### Düz ES5 fonksiyonları yerine ES2015/ES6 sınıflarını tercih et
 
-Klasik ES5 sınıfları için okunabilir sınıf mirası, construction ve yöntem tanımları 
-elde etmek çok zor. Kalıtıma ihtiyacınız varsa (ve olmaması gerektiğinin farkında olun), 
-o zaman ES2015/ES6 sınıflarını tercih edin. Bununla birlikte, kendinizi daha büyük ve daha 
-karmaşık nesnelere ihtiyaç duyana kadar sınıflara göre küçük fonksiyonlar tercih edin.
+Klasik ES5 sınıfları için okunabilir sınıf mirası, construction ve yöntem tanımları elde etmek çok zor. Kalıtıma ihtiyacınız varsa (ve olmaması gerektiğinin farkında olun), o zaman ES2015/ES6 sınıflarını tercih edin. Bununla birlikte, kendinizi daha büyük ve daha karmaşık nesnelere ihtiyaç duyana kadar sınıflara göre küçük fonksiyonlar tercih edin.
 
 **Yanlış:**
 
@@ -1217,11 +1100,7 @@ class Human extends Mammal {
 
 ### Yöntem zincirleme kullanın
 
-Bu kalıp JavaScript'te çok kullanışlıdır ve bu kullanımı jQuery ve Lodash gibi 
-birçok kütüphanede görürsünüz. Kodunuzun anlamlı ve daha az ayrıntılı olmasını sağlar. 
-Bu nedenle diyelim ki, yöntem zincirleme kullanın ve kodunuzun ne kadar temiz olacağına 
-bakın. Sınıf tanımlamalarınızda, basitçe her yöntemin sonuna `this` döndürün ve 
-bunun üzerine daha fazla sınıf yöntemi zincirleyebilirsiniz.
+Bu kalıp JavaScript'te çok kullanışlıdır ve bu kullanımı jQuery ve Lodash gibi birçok kütüphanede görürsünüz. Kodunuzun anlamlı ve daha az ayrıntılı olmasını sağlar. Bu nedenle diyelim ki, yöntem zincirleme kullanın ve kodunuzun ne kadar temiz olacağına bakın. Sınıf tanımlamalarınızda, basitçe her yöntemin sonuna `this` döndürün ve bunun üzerine daha fazla sınıf yöntemi zincirleyebilirsiniz.
 
 **Yanlış:**
 
@@ -1297,22 +1176,13 @@ const car = new Car("Ford", "F-150", "red").setColor("pink").save();
 
 ### Kalıtım yerine kompozisyonu tercih et
 
-Dörtlü Çetenin [_Design Patterns_](https://en.wikipedia.org/wiki/Design_Patterns) makalesinde 
-ünlü bir şekilde belirtildiği gibi, kalıtım yapabileceğiniz yerde kompozisyonu tercih etmelisiniz. 
-Kalıtım kullanmak için birçok neden ve kompozisyon kullanmak için de birçok neden vardır. Bu en üst 
-noktadaki ana nokta, eğer zihniniz içgüdüsel olarak kalıtım kullanmaya meylederse, kompozisyonun 
-probleminizi daha iyi modelleyebileceğini düşünmeye çalışmanızdır. 
-Bu bazı durumlarda doğrudur.
+Dörtlü Çetenin [_Design Patterns_](https://en.wikipedia.org/wiki/Design_Patterns) makalesinde ünlü bir şekilde belirtildiği gibi, kalıtım yapabileceğiniz yerde kompozisyonu tercih etmelisiniz. Kalıtım kullanmak için birçok neden ve kompozisyon kullanmak için de birçok neden vardır. Bu en üst noktadaki ana nokta, eğer zihniniz içgüdüsel olarak kalıtım kullanmaya meylederse, kompozisyonun probleminizi daha iyi modelleyebileceğini düşünmeye çalışmanızdır. Bu bazı durumlarda doğrudur.
 
-"Kalıtımı ne zaman kullanmalıyım?" diye merak ediyor olabilirsiniz. Elinizdeki probleminize 
-bağlıdır, işte size kalıtımın kompozisyondan daha mantıklı olduğu durumların uygun bir 
-liste:
+"Kalıtımı ne zaman kullanmalıyım?" diye merak ediyor olabilirsiniz. Elinizdeki probleminize bağlıdır, işte size kalıtımın kompozisyondan daha mantıklı olduğu durumların uygun bir liste:
 
-1. Kalıtım, "is-a" ilişkisini temsil eder, "has-a" ilişkisini temsil etmez 
-   (Human->Animal doğru, User->UserDetail yanlıştır.).
+1. Kalıtım, "is-a" ilişkisini temsil eder, "has-a" ilişkisini temsil etmez (Human->Animal doğru, User->UserDetail yanlıştır.).
 2. Ana sınıftan gelen kodu kullanabildiğinizde (İnsanlar hayvanlar gibi hareket edebilirler).
-3. Bir temel sınıfı değiştirerek türetilmiş sınıflarda genel değişiklikler yapmak istiyorsanız.
-   (Hareket halindeyken tüm hayvanların kalori harcamalarını güncellemek).
+3. Bir temel sınıfı değiştirerek türetilmiş sınıflarda genel değişiklikler yapmak istiyorsanız. (Hareket halindeyken tüm hayvanların kalori harcamalarını güncellemek).
 
 **Yanlış:**
 
@@ -1369,14 +1239,7 @@ class Employee {
 
 ### Tek sorumluluk prensibi (SRP)
 
-Clean Code kitabında söylendiği gibi, "Bir sınıfın değişmesi için hiçbir zaman birden 
-fazla sebep olmamalıdır". Uçuşunuzda yalnızca bir valiz alabildiğiniz zamanki gibi 
-bir çok işlevi olan bir sınıfı sıkıştırarak çıkarmak cazip gelir. Bunun sorun 
-olmasının sebebi, bu durumda sınıfınızın kavramsal olarak uyumlu olmaması ve değişmesi 
-için birçok nedene sahip olmasıdır. Bir sınıfı gerektiğinde değiştirmek için ihtiyacınız 
-duyulan zamanı azaltmanız önemlidir. Bu önemlidir, çünkü çok fazla işlevsellik bir sınıftaysa 
-ve bir parçasını değiştirirseniz, bunun kod tabanınızdaki diğer bağımlı modülleri nasıl 
-etkileyeceğini anlamak zor olabilir.
+Clean Code kitabında söylendiği gibi, "Bir sınıfın değişmesi için hiçbir zaman birden fazla sebep olmamalıdır". Uçuşunuzda yalnızca bir valiz alabildiğiniz zamanki gibi bir çok işlevi olan bir sınıfı sıkıştırarak çıkarmak cazip gelir. Bunun sorun olmasının sebebi, bu durumda sınıfınızın kavramsal olarak uyumlu olmaması ve değişmesi için birçok nedene sahip olmasıdır. Bir sınıfı gerektiğinde değiştirmek için ihtiyacınız duyulan zamanı azaltmanız önemlidir. Bu önemlidir, çünkü çok fazla işlevsellik bir sınıftaysa ve bir parçasını değiştirirseniz, bunun kod tabanınızdaki diğer bağımlı modülleri nasıl etkileyeceğini anlamak zor olabilir.
 
 **Yanlış:**
 
@@ -1429,10 +1292,7 @@ class UserSettings {
 
 ### Açık/Kapalı Prensibi (OCP)
 
-Bertrand Meyer tarafından belirtildiği gibi, "yazılım varlıkları (sınıflar, modüller, 
-fonksiyonlar, vb.) genişlemek için açık, ancak değişiklik için kapalı olmalıdır". 
-Bu ne anlama geliyor? Bu ilke, temel olarak, kullanıcıların mevcut kodu değiştirmeden 
-yeni işlevler eklemelerine izin vermeniz gerektiğini belirtir.
+Bertrand Meyer tarafından belirtildiği gibi, "yazılım varlıkları (sınıflar, modüller, fonksiyonlar, vb.) genişlemek için açık, ancak değişiklik için kapalı olmalıdır". Bu ne anlama geliyor? Bu ilke, temel olarak, kullanıcıların mevcut kodu değiştirmeden yeni işlevler eklemelerine izin vermeniz gerektiğini belirtir.
 
 **Yanlış:**
 
@@ -1520,17 +1380,9 @@ class HttpRequester {
 
 ### Liskov Yerdeğiştirme Prensibi (LSP)
 
-Bu çok basit bir kavram için karmaşık bir terimdir. Resmen "S, T'nin bir alt tipi ise, 
-o zaman T tipi olan nesneler, bu programın istenen özelliklerinden herhangi birini 
-değiştirmeden, S tipi olan nesnelerle (yani, S tipi objelerin yerini alabilir), 
-T tipi objelerin yerini alabilir. (doğruluk, yapılan görev vb.) Bu daha da karmaşık 
-bir tanım.
+Bu çok basit bir kavram için karmaşık bir terimdir. Resmen "S, T'nin bir alt tipi ise, o zaman T tipi olan nesneler, bu programın istenen özelliklerinden herhangi birini değiştirmeden, S tipi olan nesnelerle (yani, S tipi objelerin yerini alabilir), T tipi objelerin yerini alabilir. (doğruluk, yapılan görev vb.) Bu daha da karmaşık bir tanım.
 
-Bunun için en iyi açıklama bir ana sınıfınız ve bir alt sınıfınız varsa, temel sınıf ve 
-alt sınıf yanlış sonuçlar alınmadan birbirlerinin yerine kullanılabilir. Bu hala kafa 
-karıştırıcı olabilir, o yüzden klasik kare dikdörtgen örneğine bakalım. Matematiksel 
-olarak, bir kare bir dikdörtgendir, ancak kalıtsallık yoluyla "is-a" ilişkisini 
-kullanarak modellerseniz, derhal başınız derde girer.
+Bunun için en iyi açıklama bir ana sınıfınız ve bir alt sınıfınız varsa, temel sınıf ve alt sınıf yanlış sonuçlar alınmadan birbirlerinin yerine kullanılabilir. Bu hala kafa karıştırıcı olabilir, o yüzden klasik kare dikdörtgen örneğine bakalım. Matematiksel olarak, bir kare bir dikdörtgendir, ancak kalıtsallık yoluyla "is-a" ilişkisini kullanarak modellerseniz, derhal başınız derde girer.
 
 **Yanlış:**
 
@@ -1638,19 +1490,11 @@ renderLargeShapes(shapes);
 
 ### Arayüz Ayrım Prensibi (ISP)
 
-JavaScript'te interface yoktur, bu nedenle bu ilke diğerleri kadar uygulanabilir 
-değildir. Bununla birlikte, bu kavramJavaScript’in tip sistem eksikliğinde bile 
-faydalı ve önemlidir.
+JavaScript'te interface yoktur, bu nedenle bu ilke diğerleri kadar uygulanabilir değildir. Bununla birlikte, bu kavramJavaScript’in tip sistem eksikliğinde bile faydalı ve önemlidir.
 
-Arayüz Ayrım Prensibi (ISP) "İstemcilerin kullanmadıkları arayüzlere bağlı 
-kalmaması gerektiğini" belirtmektedir. Arayüzler, kendi zayıf yapısı nedeniyle 
-JavaScript'te gizli sözleşmelerdir.
+Arayüz Ayrım Prensibi (ISP) "İstemcilerin kullanmadıkları arayüzlere bağlı kalmaması gerektiğini" belirtmektedir. Arayüzler, kendi zayıf yapısı nedeniyle JavaScript'te gizli sözleşmelerdir.
 
-Bu prensibi JavaScript'te gösteren iyi bir örnek, büyük ayar nesneleri 
-gerektiren sınıflardır. İstemciden büyük miktarda seçenek ayarlamalarını 
-istememek faydalıdır, çünkü çoğu zaman tüm ayarlara ihtiyaç duymazlar. 
-Bunları isteğe bağlı yapmak, "şişman interface" sahip olmamaya yardımcı 
-olur.
+Bu prensibi JavaScript'te gösteren iyi bir örnek, büyük ayar nesneleri gerektiren sınıflardır. İstemciden büyük miktarda seçenek ayarlamalarını istememek faydalıdır, çünkü çoğu zaman tüm ayarlara ihtiyaç duymazlar. Bunları isteğe bağlı yapmak, "şişman interface" sahip olmamaya yardımcı olur.
 
 **Yanlış:**
 
@@ -1718,24 +1562,12 @@ const $ = new DOMTraverser({
 
 Bu prensip ik temel şeyi belirtir:
 
-1. Üst seviye modüller alt seviye modüllere bağımlı olmamalı. İkisi birden
-   ortak soyutlamalara bağımlı olmalı.
-2. Soyutlamalar ayrıntılara bağlı olmamalıdır. Ayrıntıkar soyutlamaya bağlı 
-   olmalıdır.
+1. Üst seviye modüller alt seviye modüllere bağımlı olmamalı. İkisi birden ortak soyutlamalara bağımlı olmalı.
+2. Soyutlamalar ayrıntılara bağlı olmamalıdır. Ayrıntıkar soyutlamaya bağlı olmalıdır.
 
-İlk başta bunu anlamak zor olabilir, ancak AngularJS ile çalıştıysanız, 
-bu ilkenin Bağımlılık Enjeksiyonu (DI) şeklinde uygulandığını gördünüz. 
-Aynı kavramlar olmasalar da, DIP, yüksek seviye modüllerinin düşük seviye 
-modüllerinin ayrıntılarını bilmesini ve kurmasını önler. Bunu DI ile 
-başarabilir. Bunun en büyük yararı modüller arasındaki eşleşmeyi azaltmasıdır. 
-İkileme çok kötü bir gelişme şeklidir çünkü kodunuzu elden geçirilmesini 
-zorlaştırır.
+İlk başta bunu anlamak zor olabilir, ancak AngularJS ile çalıştıysanız, bu ilkenin Bağımlılık Enjeksiyonu (DI) şeklinde uygulandığını gördünüz. Aynı kavramlar olmasalar da, DIP, yüksek seviye modüllerinin düşük seviye modüllerinin ayrıntılarını bilmesini ve kurmasını önler. Bunu DI ile başarabilir. Bunun en büyük yararı modüller arasındaki eşleşmeyi azaltmasıdır. İkileme çok kötü bir gelişme şeklidir çünkü kodunuzu elden geçirilmesini zorlaştırır.
 
-Daha önce de belirtildiği gibi, JavaScript'in ara yüzleri bulunmadığından 
-bağımlı olan soyutlamalar gizli sözleşmelerdir. Başka bir deyişle, 
-bir nesnenin / sınıfın başka bir nesneye / sınıfa açtığı yöntem ve 
-özellikler. Aşağıdaki örnekte, gizli sözleşme, bir `InventoryTracker` 
-için herhangi bir Request modülünün bir `requestItems` yöntemine sahip olmasıdır.
+Daha önce de belirtildiği gibi, JavaScript'in ara yüzleri bulunmadığından bağımlı olan soyutlamalar gizli sözleşmelerdir. Başka bir deyişle, bir nesnenin / sınıfın başka bir nesneye / sınıfa açtığı yöntem ve özellikler. Aşağıdaki örnekte, gizli sözleşme, bir `InventoryTracker` için herhangi bir Request modülünün bir `requestItems` yöntemine sahip olmasıdır.
 
 **Yanlış:**
 
@@ -1819,20 +1651,9 @@ inventoryTracker.requestItems();
 
 ## **Test etme**
 
-Test, sonucu oluşturmaktan daha önemlidir. Eğer hiç testiniz yoksa veya yetersiz 
-miktarda ise, sonra kodu her gönderdiğinizde hiçbir şeyi bozmadığınızdan emin 
-olmayacaksınız. Neyin uygun bir miktar oluşturduğuna karar vermek ekibinize bağlıdır, 
-ancak %100 kapsama sahip olmak (tüm özellik ve branşlar) çok yüksek bir güven ve 
-geliştirici gönül rahatlığı elde etmenizdir. Bu, harika bir test çerçevesine 
-ek olarak, aynı zamanda bir[iyi kapsam aracı](https://gotwarlost.github.io/istanbul/) 
-sahip olmanız demektir.
+Test, sonucu oluşturmaktan daha önemlidir. Eğer hiç testiniz yoksa veya yetersiz miktarda ise, sonra kodu her gönderdiğinizde hiçbir şeyi bozmadığınızdan emin olmayacaksınız. Neyin uygun bir miktar oluşturduğuna karar vermek ekibinize bağlıdır, ancak %100 kapsama sahip olmak (tüm özellik ve branşlar) çok yüksek bir güven ve geliştirici gönül rahatlığı elde etmenizdir. Bu, harika bir test çerçevesine ek olarak, aynı zamanda bir[iyi kapsam aracı](https://gotwarlost.github.io/istanbul/) sahip olmanız demektir.
 
-Test yazmamak için mazeret yok. Bol miktarda [JS test çatısı](https://jstherightway.org/#testing-tools) 
-var, bu yüzden ekibinizin tercih ettiği bir tane bulun. Takımınız için uygun 
-olanı bulduğunuzda, tanıttığınız her yeni özellik / modül için her zaman 
-testler yazmayı hedefleyin. Tercih ettiğiniz yöntem Test Tahrikli Geliştirme (TDD) ise, 
-bu harika, ancak asıl mesele, herhangi bir özelliği başlatmadan veya mevcut olanı yeniden 
-düzenlemeden önce kapsama hedeflerinize ulaştığınızdan emin olmaktır.
+Test yazmamak için mazeret yok. Bol miktarda [JS test çatısı](https://jstherightway.org/#testing-tools) var, bu yüzden ekibinizin tercih ettiği bir tane bulun. Takımınız için uygun olanı bulduğunuzda, tanıttığınız her yeni özellik / modül için her zaman testler yazmayı hedefleyin. Tercih ettiğiniz yöntem Test Tahrikli Geliştirme (TDD) ise, bu harika, ancak asıl mesele, herhangi bir özelliği başlatmadan veya mevcut olanı yeniden düzenlemeden önce kapsama hedeflerinize ulaştığınızdan emin olmaktır.
 
 ### Her test için tek kavram
 
@@ -1892,8 +1713,7 @@ describe("MomentJS", () => {
 
 ### Promise kullanın, callback'leri değil
 
-Callback'ler temiz değil ve aşırı miktarda dallanmaya neden oluyorlar. ES2015/ES6 ile, 
-Promise artık yerleşik bir küresel tiptir. Mutlaka kullanın!
+Callback'ler temiz değil ve aşırı miktarda dallanmaya neden oluyorlar. ES2015/ES6 ile, Promise artık yerleşik bir küresel tiptir. Mutlaka kullanın!
 
 **Yanlış:**
 
@@ -1941,11 +1761,7 @@ get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
 
 ### Async/Await Promise'lerden daha temizdir
 
-Promise'ler geri Callback'lere göre çok temiz bir alternatif, ancak ES2017/ES8 
-daha temiz bir çözüm olan async ve wait yönteminide sağlıyor. İhtiyacınız olan 
-tek şey bir `async` anahtar kelimesinde önceden belirlenmiş bir fonksiyondur ve 
-ardından yapmak istediğiniz `then` fonksiyonlar zinciri olmadan zorunlu olarak 
-yazabilirsiniz. Bugün ES2017/ES8 özelliklerinden yararlanabiliyorsanız bunu kullanın!
+Promise'ler geri Callback'lere göre çok temiz bir alternatif, ancak ES2017/ES8 daha temiz bir çözüm olan async ve wait yönteminide sağlıyor. İhtiyacınız olan tek şey bir `async` anahtar kelimesinde önceden belirlenmiş bir fonksiyondur ve ardından yapmak istediğiniz `then` fonksiyonlar zinciri olmadan zorunlu olarak yazabilirsiniz. Bugün ES2017/ES8 özelliklerinden yararlanabiliyorsanız bunu kullanın!
 
 **Yanlış:**
 
@@ -1988,19 +1804,11 @@ async function getCleanCodeArticle() {
 
 ## **Hata yakalama**
 
-Fırlatılmış hatalar iyi bir şeydir! Programınızdaki bir şey ters gittiğinde 
-çalışma zamanının başarıyla tanımlandığı ve mevcut yığında işlev yürütmeyi 
-durdurarak, işlemi (o anki düğümde) öldürerek ve konsolda bir yığın izlemesi 
-ile size bildirerek sizi bilgilendirmesini sağlar.
+Fırlatılmış hatalar iyi bir şeydir! Programınızdaki bir şey ters gittiğinde çalışma zamanının başarıyla tanımlandığı ve mevcut yığında işlev yürütmeyi durdurarak, işlemi (o anki düğümde) öldürerek ve konsolda bir yığın izlemesi ile size bildirerek sizi bilgilendirmesini sağlar.
 
 ### Yakalanmış hataları gözardı etmeyin
 
-Yakalanan bir hata ile hiçbir şey yapmamak, size söylenen hatayı gidermek veya 
-hiç olumsuz cevap verebilmeniz için yardımcı olmaz. Hatayı sadece konsola 
-kaydetmek (`console.log`), konsola yazdırılan hatalardan oluşan bir denizde 
-kaybolabildiği için çoğunlukla faydalı değildir. Herhangi bir kod parçasını 
-bir `try/catch` içine alırsanız, orada bir hatanın olabileceğini düşünüyorsunuz ve 
-bu nedenle gerçekleştiği zaman için bir planınız olmalı veya bir kod oluşturmalısınız.
+Yakalanan bir hata ile hiçbir şey yapmamak, size söylenen hatayı gidermek veya hiç olumsuz cevap verebilmeniz için yardımcı olmaz. Hatayı sadece konsola kaydetmek (`console.log`), konsola yazdırılan hatalardan oluşan bir denizde kaybolabildiği için çoğunlukla faydalı değildir. Herhangi bir kod parçasını bir `try/catch` içine alırsanız, orada bir hatanın olabileceğini düşünüyorsunuz ve bu nedenle gerçekleştiği zaman için bir planınız olmalı veya bir kod oluşturmalısınız.
 
 **Yanlış:**
 
@@ -2030,8 +1838,7 @@ try {
 
 ### Reddedilen promise'leri gözardı etmeyin
 
-`try/catch` bloğu içindeki hataları gözardı etmemenizin sebebbi olan gerekçeler 
-bunun için de geçerlidir.
+`try/catch` bloğu içindeki hataları gözardı etmemenizin sebebbi olan gerekçeler bunun için de geçerlidir.
 
 **Yanlış:**
 
@@ -2067,20 +1874,13 @@ getdata()
 
 ## **Yazım şekli**
 
-Kod yazım şekli kişisel bir konudur. Buradaki diğer kurallar gibi, takip edebileceğiniz 
-etkili ve hızlı bir kural yoktur. dikkat etmeniz gereken şey bu konu hakkında TARTIŞMALARA YOL AÇMAMAKTIR.
-Bunu otomatikleştirebileceğiniz [bir sürü araç](https://standardjs.com/rules.html) var.
-Birini kullanın! Kodlama şekli üzerine insanların tartışması para ve kaynak israfıdır.
+Kod yazım şekli kişisel bir konudur. Buradaki diğer kurallar gibi, takip edebileceğiniz etkili ve hızlı bir kural yoktur. dikkat etmeniz gereken şey bu konu hakkında TARTIŞMALARA YOL AÇMAMAKTIR. Bunu otomatikleştirebileceğiniz [bir sürü araç](https://standardjs.com/rules.html) var. Birini kullanın! Kodlama şekli üzerine insanların tartışması para ve kaynak israfıdır.
 
-Otomatik formatlama (girintiler, sekmeler ve boşluklar, çift ve tek tırnaklar, vb.) 
-kapsamına girmeyen şeyler için aşağıdaki bazı yönergelere 
-bakın.
+Otomatik formatlama (girintiler, sekmeler ve boşluklar, çift ve tek tırnaklar, vb.) kapsamına girmeyen şeyler için aşağıdaki bazı yönergelere bakın.
 
 ### Tutarlı harf boyutlandırması kullanın
 
-JavaScript tip zorunlu bir dil değildir, bu yüzden büyük harf size değişkenleriniz, 
-fonksiyonlarını vb. hakkında çok şey söyler. Bu kurallar tartışmaya açıktır, ekibiniz 
-ne isterse seçebilir. Mesele şu ki, neyi seçerseniz seçin, mutlaka tutarlı olun.
+JavaScript tip zorunlu bir dil değildir, bu yüzden büyük harf size değişkenleriniz, fonksiyonlarını vb. hakkında çok şey söyler. Bu kurallar tartışmaya açıktır, ekibiniz ne isterse seçebilir. Mesele şu ki, neyi seçerseniz seçin, mutlaka tutarlı olun.
 
 **Yanlış:**
 
@@ -2118,9 +1918,7 @@ class Alpaca {}
 
 ### Çağrılan ve çağıran fonksiyonlar birbirine yakın olmalı
 
-Bir fonksiyon diğerini çağırıyorsa, bu fonksiyonları kaynak dosyada dikey olarak birbirine yakın 
-tanımlayın. İdeal olarak, arayanı aranan fonksiyonun hemen üstünde tutun. Bir gazete gibi, 
-yukarıdan aşağıya kod okuma eğilimindeyiz. Bu nedenle, kodunuzu bu şekilde okunmasını sağlayın.
+Bir fonksiyon diğerini çağırıyorsa, bu fonksiyonları kaynak dosyada dikey olarak birbirine yakın tanımlayın. İdeal olarak, arayanı aranan fonksiyonun hemen üstünde tutun. Bir gazete gibi, yukarıdan aşağıya kod okuma eğilimindeyiz. Bu nedenle, kodunuzu bu şekilde okunmasını sağlayın.
 
 **Yanlış:**
 
@@ -2274,8 +2072,7 @@ doStuff();
 
 ### Hikaye şeklinde yorumlar yapmayın
 
-Unutma, sürüm kontrol sistemini kullan! Ölü kod, yorum içine alınmış kod ve özellikle 
-hikaye şeklinde yorumlara gerek yoktur. Geçmişi bulmak için `git log` kullanın!
+Unutma, sürüm kontrol sistemini kullan! Ölü kod, yorum içine alınmış kod ve özellikle hikaye şeklinde yorumlara gerek yoktur. Geçmişi bulmak için `git log` kullanın!
 
 **Yanlış:**
 
@@ -2303,8 +2100,7 @@ function combine(a, b) {
 
 ### Yer belirticileri kullanmayın
 
-Genellikle sadece görüntü kirliliği eklerler. Fonksiyonların ve değişken adlarının 
-uygun girinti ve biçimlendirmeyle birlikte görsel yapıyı kodunuza vermesini sağlayın.
+Genellikle sadece görüntü kirliliği eklerler. Fonksiyonların ve değişken adlarının uygun girinti ve biçimlendirmeyle birlikte görsel yapıyı kodunuza vermesini sağlayın.
 
 **Yanlış:**
 
@@ -2344,8 +2140,7 @@ const actions = function() {
 
 Bu belge aşağıdaki dillere çevirilmiştir:
 
-- ![fr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/France.png) **Fransızca**:
-  [GavBaros/clean-code-javascript-fr](https://github.com/GavBaros/clean-code-javascript-fr)
+- ![fr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/France.png) **Fransızca**: [GavBaros/clean-code-javascript-fr](https://github.com/GavBaros/clean-code-javascript-fr)
 - ![br](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png) **Brezilya Portekizcesi**: [fesnt/clean-code-javascript](https://github.com/fesnt/clean-code-javascript)
 - ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Uruguay.png) **İspanyolca**: [andersontr15/clean-code-javascript](https://github.com/andersontr15/clean-code-javascript-es)
 - ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png) **İspanyolca**: [tureey/clean-code-javascript](https://github.com/tureey/clean-code-javascript)
